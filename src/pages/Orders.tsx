@@ -16,23 +16,23 @@ const Orders = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-[#f3f3f3]">
       <Navigation />
-      <main className="max-w-[95%] mx-auto py-6 px-4">
-        <div className="mb-6 flex items-center justify-between">
+      <main className="container mx-auto py-8 px-4">
+        <div className="mb-6">
           <h1 className="text-2xl font-semibold text-gray-900">Orders</h1>
         </div>
         
-        <div className="space-y-6">
-          <div className="bg-white rounded-lg shadow-sm p-6">
+        <div className="space-y-8">
+          <div className="bg-white rounded-lg shadow p-6">
             <TaskSearch />
           </div>
 
-          <div className="bg-white rounded-lg shadow-sm p-6">
+          <div className="bg-white rounded-lg shadow p-6">
             <TaskActions onAction={handleAction} />
           </div>
 
-          <div className="bg-white rounded-lg shadow-sm p-6">
+          <div className="bg-white rounded-lg shadow p-6">
             <TaskTable />
           </div>
         </div>
