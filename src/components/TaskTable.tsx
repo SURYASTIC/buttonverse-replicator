@@ -31,32 +31,32 @@ const TaskTable = () => {
   ];
 
   return (
-    <div className="border rounded-lg">
+    <div className="rounded-lg border border-gray-200">
       <Table>
         <TableHeader>
-          <TableRow>
+          <TableRow className="bg-gray-50">
             <TableHead className="w-12">
               <Checkbox />
             </TableHead>
-            <TableHead>Process ID</TableHead>
-            <TableHead>Task ID</TableHead>
-            <TableHead>Task Name</TableHead>
-            <TableHead>Status</TableHead>
-            <TableHead>Counter</TableHead>
-            <TableHead>State</TableHead>
-            <TableHead>Is Exception</TableHead>
-            <TableHead>Has Exception</TableHead>
-            <TableHead>Create Date</TableHead>
-            <TableHead>Due Date</TableHead>
+            <TableHead className="font-semibold">Process ID</TableHead>
+            <TableHead className="font-semibold">Task ID</TableHead>
+            <TableHead className="font-semibold">Task Name</TableHead>
+            <TableHead className="font-semibold">Status</TableHead>
+            <TableHead className="font-semibold">Counter</TableHead>
+            <TableHead className="font-semibold">State</TableHead>
+            <TableHead className="font-semibold">Is Exception</TableHead>
+            <TableHead className="font-semibold">Has Exception</TableHead>
+            <TableHead className="font-semibold">Create Date</TableHead>
+            <TableHead className="font-semibold">Due Date</TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>
           {tasks.map((task) => (
-            <TableRow key={task.id}>
+            <TableRow key={task.id} className="hover:bg-gray-50">
               <TableCell>
                 <Checkbox />
               </TableCell>
-              <TableCell>{task.processId}</TableCell>
+              <TableCell className="font-medium">{task.processId}</TableCell>
               <TableCell>{task.id}</TableCell>
               <TableCell>{task.name}</TableCell>
               <TableCell>{task.status}</TableCell>
