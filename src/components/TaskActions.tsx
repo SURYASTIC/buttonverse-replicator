@@ -1,13 +1,20 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { UserPlus, Users, CheckSquare, MessageSquarePlus, AlertTriangle, FileSpreadsheet } from 'lucide-react';
+import { useToast } from '@/hooks/use-toast';
 
 interface TaskActionsProps {
   onAction: (action: string) => void;
 }
 
 const TaskActions = ({ onAction }: TaskActionsProps) => {
+  const { toast } = useToast();
+
   const handleAction = (actionName: string) => {
+    toast({
+      title: "Action Triggered",
+      description: `${actionName} action was clicked`,
+    });
     onAction(actionName);
   };
 
