@@ -5,7 +5,7 @@ import TaskActions from '@/components/TaskActions';
 import TaskTable from '@/components/TaskTable';
 import { useToast } from '@/components/ui/use-toast';
 
-const Index = () => {
+const Orders = () => {
   const { toast } = useToast();
 
   return (
@@ -13,15 +13,12 @@ const Index = () => {
       <Navigation />
       <main className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
         <div className="mb-6">
-          <h1 className="text-2xl font-semibold text-gray-900">Tasks</h1>
-          <p className="mt-2 text-sm text-gray-600">
-            An "Enhanced Search" tab has been added. This is an alternative, expanded search capability that will augment the existing search. Both search tabs will continue to be supported and you may use which ever best meets your needs.
-          </p>
+          <h1 className="text-2xl font-semibold text-gray-900">Orders</h1>
         </div>
         <TaskSearch />
         <TaskActions onAction={(action) => {
           toast({
-            title: "Task Action",
+            title: "Order Action",
             description: `${action} action was triggered`,
           });
         }} />
@@ -31,4 +28,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default Orders;
